@@ -3,147 +3,595 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepak Wadhwa - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<title>GAUTAM JHAA (OFFICIAL — Learning Community</title>
+
+<meta
+  name="description"
+  content="Join GAUTAM JHAA (OFFICIAL's Telegram learning community for educational sessions, market concepts, chart reading and case discussions."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+>
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+:root{
+  --bg:#050708;
+  --card:#091116;
+  --card2:#0d171d;
+  --cyan:#00cfff;
+  --purple:#8747ff;
+  --text:#ffffff;
+  --muted:#aeb8bd;
+  --line:rgba(255,255,255,.09);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  min-height:100%;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  padding:20px 12px 30px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(0,207,255,.13),
+      transparent 42%
+    ),
+    var(--bg);
+
+  color:var(--text);
+
+  font-family:'Poppins',sans-serif;
+
+  -webkit-font-smoothing:antialiased;
+}
+
+/* CARD */
+
+.card{
+  width:100%;
+  max-width:390px;
+
+  padding:25px 20px 19px;
+
+  text-align:center;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(13,23,29,.98),
+      rgba(5,11,14,.98)
+    );
+
+  border:1px solid rgba(0,207,255,.55);
+  border-radius:28px;
+
+  box-shadow:
+    0 0 35px rgba(0,207,255,.10),
+    0 25px 70px rgba(0,0,0,.45);
+
+  animation:showCard .5s ease;
+}
+
+@keyframes showCard{
+  from{
+    opacity:0;
+    transform:translateY(12px);
   }
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* PROFILE */
+
+.profile-img{
+  width:108px;
+  height:108px;
+
+  display:block;
+
+  margin:0 auto;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+  border:3px solid var(--cyan);
+
+  box-shadow:
+    0 0 20px rgba(0,207,255,.30);
+}
+
+h1{
+  margin:15px 0 6px;
+
+  color:#fff;
+
+  font-size:22px;
+  line-height:1.25;
+
+  font-weight:800;
+
+  letter-spacing:.5px;
+}
+
+.subtitle{
+  color:#89969c;
+
+  font-size:11px;
+  font-weight:500;
+
+  letter-spacing:.2px;
+}
+
+/* FEATURES */
+
+.features{
+  margin:22px auto 0;
+
+  width:100%;
+
+  padding:3px 13px;
+
+  border-radius:16px;
+
+  background:rgba(255,255,255,.025);
+  border:1px solid var(--line);
+}
+
+.feature{
+  display:flex;
+  align-items:center;
+
+  min-height:47px;
+
+  text-align:left;
+
+  color:#d5dde0;
+
+  font-size:12px;
+  line-height:1.4;
+
+  border-bottom:1px solid var(--line);
+}
+
+.feature:last-child{
+  border-bottom:none;
+}
+
+.icon{
+  width:29px;
+  flex:0 0 29px;
+
+  font-size:16px;
+}
+
+/* JOIN TEXT */
+
+.join-text{
+  margin:20px 0 12px;
+
+  color:#dce3e6;
+
+  font-size:12px;
+  line-height:1.5;
+}
+
+/* TELEGRAM BUTTON */
+
+.telegram-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+
+  width:100%;
+
+  padding:15px 18px;
+
+  border-radius:14px;
+
+  color:#fff;
+  text-decoration:none;
+
+  background:
+    linear-gradient(
+      100deg,
+      #009ed0,
+      #536cff,
+      #8747ff
+    );
+
+  font-size:15px;
+  font-weight:800;
+
+  box-shadow:
+    0 8px 22px rgba(0,174,255,.22);
+
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease;
+}
+
+.telegram-btn:hover{
+  box-shadow:
+    0 10px 28px rgba(0,174,255,.34);
+}
+
+.telegram-btn:active{
+  transform:scale(.985);
+}
+
+.telegram-icon{
+  width:19px;
+  height:19px;
+  flex:0 0 19px;
+}
+
+/* SECURITY NOTE */
+
+.cta-note{
+  margin-top:9px;
+
+  color:#69757b;
+
+  font-size:9.5px;
+}
+
+/* QUOTE */
+
+.hindi-quote{
+  margin:19px 0;
+
+  color:#aeb8bd;
+
+  font-size:12px;
+  line-height:1.6;
+}
+
+/* ADVERTISER */
+
+.footer-box{
+  padding:10px 9px;
+
+  border:1px solid rgba(0,207,255,.14);
+  border-radius:12px;
+
+  background:rgba(0,207,255,.025);
+
+  color:#737f84;
+
+  font-size:10px;
+  line-height:1.5;
+}
+
+.footer-box a{
+  color:var(--cyan);
+
+  font-weight:700;
+
+  text-decoration:none;
+}
+
+/* DISCLAIMER */
+
+.disclaimer{
+  margin-top:11px;
+
+  color:#4f595e;
+
+  font-size:8.5px;
+  line-height:1.55;
+}
+
+/* SMALL SCREENS */
+
+@media(max-width:360px){
+
+  body{
+    padding:14px 9px 25px;
   }
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
+  .card{
+    padding:21px 15px 17px;
+    border-radius:24px;
   }
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  .profile-img{
+    width:94px;
+    height:94px;
   }
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
+  h1{
+    font-size:20px;
   }
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
+  .feature{
+    font-size:11.5px;
   }
 
-  .feature-item:last-child { border-bottom: none; }
+  .telegram-btn{
+    font-size:14px;
+  }
+}
 
-  .icon { margin-right: 12px; font-size: 16px; }
+/* REDUCED MOTION */
 
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
+@media(prefers-reduced-motion:reduce){
+
+  .card{
+    animation:none;
   }
 
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
+  .telegram-btn{
+    transition:none;
   }
-
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
-
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
-
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
-
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
+}
 </style>
 </head>
+
+
 <body>
 
-<div class="card">
-  <img src="https://i.ibb.co/FkV61CBG/711752123-122102238423341553-4586529772719677765-n.jpg" alt="Munaaf" class="profile-img">
+<main class="card">
 
-  <h1>Munaaf</h1>
+  <!-- PROFILE -->
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
+  <img
+    src="https://i.ibb.co/38hYPCN/Ot-Jdmt-BK70n-B-h6-MTA2-E3-Rw-Tze-UV1rl7wb-Qn-PJTm8-EW88-YR4n9wj6q-EM5nhda-pio4-Br-OES-7-XIl-EGLtqt9-Gs855.jpg"
+    alt="GAUTAM JHAA (OFFICIAL"
+    class="profile-img"
+    width="108"
+    height="108"
+    loading="eager"
+  >
+
+  <h1>GAUTAM JHAA (OFFICIAL</h1>
+
+  <div class="subtitle">
+    Learning & Educational Community
   </div>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
 
-  <a href="https://t.me/+VQKcLntbMYhjOGJl" class="telegram-btn">JOIN TELEGRAM</a>
+  <!-- FEATURES -->
 
-  <p class="hindi-quote">     ,     </p>
+  <section class="features" aria-label="Community features">
+
+    <div class="feature">
+      <span class="icon">🌐</span>
+      <span>Learning & Educational Sessions</span>
+    </div>
+
+    <div class="feature">
+      <span class="icon">📊</span>
+      <span>Market Concepts & Awareness</span>
+    </div>
+
+    <div class="feature">
+      <span class="icon">💎</span>
+      <span>Chart Reading Concepts</span>
+    </div>
+
+    <div class="feature">
+      <span class="icon">💻</span>
+      <span>Educational Case Discussions</span>
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <p class="join-text">
+    Join the learning community on Telegram
+  </p>
+
+  <a
+    id="telegramJoin"
+    class="telegram-btn"
+    href="https://t.me/+-xu7L60czfdhZTE1"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Join GAUTAM JHAA (OFFICIAL Telegram learning community"
+  >
+
+    <svg
+      class="telegram-icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M21.8 4.2 18.6 19c-.24 1.08-.88 1.34-1.78.82l-4.87-3.58-2.35 2.28c-.26.26-.48.48-.99.48l.35-4.98 9.05-8.16c.39-.35-.09-.55-.61-.2L5.47 12.61.69 11.1c-1.04-.33-1.06-1.05.22-1.54L20.03 2.78c.88-.33 1.64.21 1.77 1.42Z"
+        fill="white"
+      />
+    </svg>
+
+    JOIN TELEGRAM
+
+  </a>
+
+  <div class="cta-note">
+    Opens Telegram in a new tab
+  </div>
+
+
+  <!-- QUOTE -->
+
+  <p class="hindi-quote">
+    नियत अच्छी और मेहनत सच्ची हो,
+    तो कामयाबी जरूर मिलती है।
+  </p>
+
+
+  <!-- ADVERTISER -->
 
   <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
+
+    This Channel is advertised by
+
+    <a
+      href="https://t.me/+FCJ4P867qhxjOTk9"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      AD BUILD AGENCY
+    </a>
+
   </div>
 
+
+  <!-- DISCLAIMER -->
+
   <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
+
+    Educational content only. This page does not promise
+    profits or financial returns.
+
+    <br>
+
+    This site is not part of Facebook™ or endorsed by Facebook™.
+
+    <br>
+
+    Terms · Privacy · Disclaimer
+
   </div>
-</div>
+
+</main>
+
+
+<!-- =========================
+     META PIXEL
+     ========================= -->
+
+<script>
+
+!function(f,b,e,v,n,t,s)
+{
+  if(f.fbq)return;
+
+  n=f.fbq=function()
+  {
+    n.callMethod
+      ? n.callMethod.apply(n,arguments)
+      : n.queue.push(arguments)
+  };
+
+  if(!f._fbq)f._fbq=n;
+
+  n.push=n;
+  n.loaded=true;
+  n.version='2.0';
+  n.queue=[];
+
+  t=b.createElement(e);
+  t.async=true;
+  t.src=v;
+
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s);
+
+}
+(
+  window,
+  document,
+  'script',
+  'https://connect.facebook.net/en_US/fbevents.js'
+);
+
+
+/*
+  Use ONE Pixel ID only.
+  This is the ID from your original
+  Meta Pixel script.
+*/
+
+fbq(
+  'init',
+  '1090563630195991'
+);
+
+fbq(
+  'track',
+  'PageView'
+);
+
+</script>
+
+
+<noscript>
+
+  <img
+    height="1"
+    width="1"
+    style="display:none"
+    alt=""
+    src="https://www.facebook.com/tr?id=1090563630195991&ev=PageView&noscript=1"
+  >
+
+</noscript>
+
+
+<!-- =========================
+     TELEGRAM CLICK TRACKING
+     ========================= -->
+
+<script>
+
+(function(){
+
+  const button =
+    document.getElementById('telegramJoin');
+
+  if(!button) return;
+
+
+  button.addEventListener('click', function(){
+
+    /*
+      This records the user's actual click.
+      It does NOT fake a Telegram join.
+    */
+
+    if(typeof window.fbq === 'function'){
+
+      window.fbq(
+        'track',
+        'Lead',
+        {
+          content_name:'Telegram Join',
+          content_category:'Learning Community'
+        }
+      );
+
+    }
+
+  });
+
+})();
+
+</script>
 
 </body>
 </html>
